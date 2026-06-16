@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -60,6 +62,43 @@
             <p> @NosEncantaLoRandom </p>
         </div>
         <br>
+
+        <section class="formulario-contacto">
+            <form>
+                <div class="formulario">
+                    <div class="mb-3">
+                        <label for="ejemploNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ejemplo: Maria">
+                        <div id="nameText" class="form-text">Queremos saber tu nombre</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ejemploNombre" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Ejemplo: Lara">
+                        <div id="lastnameText" class="form-text">Queremos saber tu apellido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ejemploNombre" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ejemplo: maria@gmail.com"
+                            required>
+                        <div id="nameText" class="form-text">Tranquilo no te enviaremos spam pero nos contactaremos
+                            mejor
+                            contigo</div>
+                    </div>
+                    <div class="seleccionDeCiudad">
+                        <select name="ciudad" id="ciudad">
+                            <option value="">Seleccionar</option>
+                            <option value="Bog">Bogota</option>
+                            <option value="Baq">Barranquilla</option>
+                            <option value="Med">Medellin</option>
+                            <option value="NA">No quiero decirlo</option>
+                        </select>
+                        <div id="nameText" class="form-text">Tu ciudad nos ayuda a saber como hablarte eche</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </section>
+
         <div class="ubicacion">
             <p class="parrafo"> Dirección: Carrera 8z #415k - 87 sur </p>
             <iframe
@@ -103,6 +142,7 @@
             <p class="amor">Hecho con ♡ por nuestro equipo</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
