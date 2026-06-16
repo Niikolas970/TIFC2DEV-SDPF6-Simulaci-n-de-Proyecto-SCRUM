@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>TOP 5</title>
 </head>
@@ -29,10 +31,16 @@
     </nav>
 
     <section class="principal-nosotros">
-        <div>
-            <h1>Confirmado por chayanne, somos los más bacanos</h1>
-            <p>Este es un espacio 100% libre de humos y solo queremos parchearnos un rato y que nos stalkees con ganas
+
+        <div class="card mb-3">
+              <img src="./imagenes/chayane.jpg" class="card-img-top" alt="chayanne">
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Confirmado por chayanne, somos los más bacanos</h5>
+                <p class="card-text">Este es un espacio 100% libre de humos y solo queremos parchearnos un rato y que nos stalkees con ganas
             </p>
+            </div>
         </div>
         <div id="img-principal-nosotros">
             <div>
@@ -40,15 +48,17 @@
                 <p>El contenido a continuacion es de caracter sensible pero apto pa todo el mundo pero como buenos
                     ciudadanos te daremos unas cuantas recomendaciones.</p>
             </div>
-            <div>
-                <h1>Recomendacion 1</h1>
-                <img src="./imagenes/nino1.png" alt="">
-                <p>Agarrate los pantalones</p>
+            <div class="card">
+                <img src="./imagenes/nino1.png" class="card-img-top" alt="recomendacion 1">
+                <div class="card-body">
+                    <p class="card-text">Agarrate los pantalones</p>
+                </div>
             </div>
-            <div>
-                <h1>Recomendacion 2</h1>
-                <img src="./imagenes/nino2.png" alt="">
-                <p>Sin prisa, con calma</p>
+            <div class="card">
+                <img src="./imagenes/nino2.png" class="card-img-top" alt="recomendacion 2">
+                <div class="card-body">
+                    <p class="card-text">Sin prisa, con calma</p>
+                </div>
             </div>
         </div>
     </section>
@@ -165,6 +175,9 @@
             <p class="amor">Hecho con ♡ por nuestro equipo</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

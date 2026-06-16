@@ -213,16 +213,34 @@ button{
 
 /* =========================
    SECCION PRINCIPAL NOSOTROS
-========================= */
+   ========================= */
+
+/* CONTENEDOR PRINCIPAL */
 .principal-nosotros {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 80px 60px;
-    gap: 40px;
+    gap: 24px;
     background: #f9f9ff;
 }
 
+/* IMAGEN CHAYANNE Y CARD "CONFIRMADO" — ancho completo */
+.principal-nosotros > .card {
+    width: 100%;
+    margin: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.principal-nosotros > .card img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TIPOGRAFÍA */
 .principal-nosotros h1 {
     font-family: "Lilita One", sans-serif;
     font-size: 42px;
@@ -233,34 +251,56 @@ button{
 .principal-nosotros p {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    max-width: 500px;
 }
 
-/* TARJETAS DE ADVERTENCIA */
+/* =========================
+   SECCIÓN ADVERTENCIA
+   ========================= */
+
 #img-principal-nosotros {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    align-items: stretch;
 }
 
-#img-principal-nosotros > div {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease;
+/* TEXTO CENTRAL */
+#img-principal-nosotros > div:first-child {
+    flex: 1 1 300px;
+    min-width: 250px;
 }
 
-#img-principal-nosotros > div:hover {
+/* TARJETAS (CORREGIDO OVERFLOW) */
+#img-principal-nosotros > .card {
+    flex: 1 1 240px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HOVER */
+#img-principal-nosotros > .card:hover {
     transform: translateY(-5px);
 }
 
-/* 🔥 IMAGENES MAS GRANDES */
+/* IMAGENES */
 #img-principal-nosotros img {
-    width: 200px;
-    margin: 10px 0;
+    width: 100%;
+    display: block;
 }
 
+/* =========================
+   FIX GLOBAL ANTI OVERFLOW
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+
+}
 /* =========================
    SECCION OBJETIVO / MISION
 ========================= */
