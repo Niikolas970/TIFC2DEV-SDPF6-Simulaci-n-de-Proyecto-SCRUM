@@ -593,71 +593,108 @@ button{
 /* =========================
    CONTENEDOR DE CARDS
 ========================= */
-
-.contenedor {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 60px 40px;
-    flex-wrap: wrap;
-    background: #ffffff;
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
 }
-
+.encabezado1{
+    margin: 60px;
+    padding: 40px;
+}
+#encabezado{
+    font-family: "Lilita One",sans-serif;
+    color: #04E49E;
+    font-size: 80px;
+    text-align: center;
+    -webkit-text-stroke: 1px #3F22EC;
+}
+.parrafo{
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
 /* =========================
    CARDS CONTACTO
 ========================= */
 
-.card {
-    background: white;
-    width: 250px;
-    padding: 25px;
-    border-radius: 18px;
+.card{
+    font-family: "Poppins",sans-serif;
+    color: #3F22EC;
+    font-size: 25px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin: 15px;
+    padding: 30px;
+    height: 300px;
+    background-color: #E0F900;
+    transition: 0.3s;
+    border-radius: 20px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+.card:hover{
+    background-color: #F0C962;
+    color: white; 
+    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-color: #F5A623;
+    opacity: 0.8; 
 }
 
 /* ICONOS */
 .card i {
-    font-size: 35px;
+    font-size: 50px;
     color: #3333cc;
     margin-bottom: 15px;
 }
-
-/* TITULO CARD */
-.titulito {
-    font-family: "Lilita One", sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2412a8;
+/* =========================
+   FORMULARIO
+========================= */
+.formulario-contacto{
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    color: white;
+    background-color: #FD57A9;
+}
+.form-label{
+    font-family: "Lilita One",sans-serif;
+    font-size: 25px;
+}
+.form-text{
+    color: #E0F900;
+}
+#ciudad{
+    background-color: #ffd8f2;
+}
+.form-control{
+    background-color: #ffd8f2;
+}
+.btn-primary{
+    font-family: "Lilita One",sans-serif;
+    font-size: 20px;
+    color: #000000;
+    background-color: #F0C962;
+    border-color: #F0C962;
 }
 
-/* TEXTO CARD */
-.card p {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    color: #333;
-}
 
 /* =========================
    UBICACION MAPA
 ========================= */
 
-.ubicacion {
-    width: 100%;
+.ubicacion{
+    font-family: "Lilita One",sans-serif;
+    grid-column: 1/4;
     text-align: center;
-    margin-top: 40px;
-    padding: 40px;
-    background: #f9f9ff;
+    margin: 20px;
+    padding: 30px;
+    transition: 0.5s;
 }
-
-.ubicacion .parrafo {
-    margin-bottom: 20px;
+.ubicacion:hover{
+    transform: scale(1.10);
 }
 
 /* MAPA */
