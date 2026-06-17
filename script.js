@@ -13,5 +13,5 @@ formulario.addEventListener('submit', function(event) {
 
     localStorage.setItem('datos-de-usuario', JSON.stringify(usuario));
     console.log('Los datos guardados están en localStorage:', usuario);
-    alert("Datos guardados correctamente ");
+    alert("⭐ Datos guardados correctamente 🌟");
 });
