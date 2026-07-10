@@ -775,160 +775,56 @@ body {
     }
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-nav a, nav button{
-    font-family: "Poppins",sans-serif;
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-nav{
-    background-color: #3333cc;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    align-items: center;
-    position: sticky;
-    top: 0;
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-nav a{
-    position: relative;
-    display: inline-block;
-    transition: transform 0.25s ease;
-}
-nav a::after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background-color: #dff700;
-    transform: translateX(-50%);
-    transition: width 0.25s ease;
-}
-nav a:hover{
-    transform: scale(1.08);
-}
-nav a:hover::after{
-    width: 100%;
-}
-ul {
-    display: flex;
-    list-style: none;
-    gap: 80px;
-}
+
 a {
-    color: white;
     text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
 }
 
-.top,.cinco,.cosas-random{
-    font-family: "Lilita One",sans-serif;
+ul {
+    list-style: none;
 }
 
-.top{
-    color: #f4b5de;
-}
-.cinco{
-    color: #dff700;
-}
-.O{
-    color: #03e29d;
-}
-
-.cosas-random{
-    color:#fa58a7 ;
-}
-.En{
-    color: #efca62;
-}
-.olombia{
-    color: #dff700;
-}
-button{
-    background-color: #dff700;
-    border-radius: 20px;
-    color: black;
-    border: none;
-    padding: 20px;
-}
-.footer {
-    background: linear-gradient(135deg, #3333cc, #2412a8);
-    color: white;
-    padding: 45px 40px 20px;
-    font-family: "Poppins", sans-serif;
-}
-.footer-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-}
-.footer-logo {
-    min-width: 190px;
-}
-.footer-logo .top,
-.footer-logo .cinco {
-    font-size: 42px;
-    line-height: 1;
-}
-.footer-logo .cosas-random {
-    margin-top: 5px;
-    font-size: 16px;
-    line-height: 0.9;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: normal;
     letter-spacing: 1px;
 }
-.footer-integrantes,
-.footer-enlaces {
-    min-width: 190px;
+
+/* ==========================
+   NAVBAR
+========================== */
+.header {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.footer .integrantes,
-.footer .navegacion {
-    color: #dff700;
-    font-size: 17px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-}
-.footer-integrantes .integrante {
-    margin-bottom: 8px;
-    font-size: 14px;
-    cursor: default;
-}
-.footer-enlaces {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.footer-enlaces a {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 9px;
-    font-size: 14px;
-    color: white;
-    transition: color 0.25s ease, transform 0.25s ease;
-}
-.footer-enlaces a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: #dff700;
-    transition: width 0.25s ease;
-}
-.footer-enlaces a:hover {
-    color: #dff700;
-    transform: translateX(5px);
-}
-.footer-enlaces a:hover::after {
-    width: 100%;
-}
-.footer-inferior {
+
+.navbar {
     max-width: 1200px;
     margin: 35px auto 0;
     padding-top: 20px;
